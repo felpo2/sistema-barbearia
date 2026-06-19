@@ -1,15 +1,16 @@
 package com.barbearia.shop.model;
 
 import jakarta.persistence.*;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
+@Data
 @Entity
 @Table(name = "tb-cliente")
 @Getter
 @Setter
 @Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class Cliente {
 
     @Id
@@ -19,5 +20,6 @@ public class Cliente {
     private String fullName;
     private Long phoneNumber;
     private String email;
+
 
 }
